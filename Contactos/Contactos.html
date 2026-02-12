@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="./CSS/Contactos.css">
+</head>
+<header>
+    <div class="header-isla">
+        <h1 class="header-titulo">ALMACEN</h1>
+        <nav class="nav-centrada">
+            <ul>
+                <li class="admin-usuario"><a href="../Carrito/Carrito.html">Ventas</a></li>
+                <li class="admin-usuario"><a href="../Inventario/inventario.html">Inventario</a></li>
+                <li class="admin-usuario"><a href="../Contactos/Contactos.html">Proveedores</a></li>
+                <li class="solo-admin"><a href="../Administracion/Administracion.html">Administración</a></li>
+            </ul>
+        </nav>
+        <div class="perfil-usuario">
+            <button class="btn-perfil" id="btnPerfil">👤</button>
+            <div class="menu-perfil" id="menuPerfil">
+                <div class="perfil-info">
+                    <p class="perfil-nombre">Usuario</p>
+                    <p class="perfil-email">usuario@almacen.com</p>
+                </div>
+                <hr class="perfil-divisor">
+                <a href="#" class="menu-item">Mi Perfil</a>
+                <a href="#" class="menu-item">Configuración</a>
+                <a href="#" class="menu-item">Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <!-- Título de Contactos conectado al nav -->
+    <div class="contactos-titulo-container">
+        <h2 class="contactos-titulo">Contactos</h2>
+    </div>
+
+    <!-- Sección de Proveedores -->
+    <section class="isla-contenedor contactos-isla" id="seccionProveedores">
+        <div class="seccion-encabezado">
+            <h3 class="seccion-titulo">Proveedores</h3>
+            <button class="btn-flotante-agregar" id="btnAgregarProveedor">+ Agregar Proveedor</button>
+        </div>
+        <div class="contactos-grid" id="gridProveedores">
+            <!-- Las tarjetas de proveedores se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Sección de Clientes -->
+    <section class="isla-contenedor contactos-isla" id="seccionClientes">
+        <div class="seccion-encabezado">
+            <h3 class="seccion-titulo">Clientes</h3>
+            <button class="btn-flotante-agregar" id="btnAgregarCliente">+ Agregar Cliente</button>
+        </div>
+        <div class="contactos-grid" id="gridClientes">
+            <!-- Las tarjetas de clientes se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <footer></footer>
+
+   <script src="./Script/Script.js"></script>
+ 
+</body>
+
+</html>

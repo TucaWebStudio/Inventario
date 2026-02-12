@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMACEN</title>
+    <link rel="stylesheet" href="./CSS/Estilo.css">
+    
+    
+</head>
+<header>
+    <div class="header-isla">
+        <h1 class="header-titulo">ALMACEN</h1>
+        <nav class="nav-centrada">
+            <ul>
+                <li class="admin-usuario"><a href="../Carrito/Carrito.html">Ventas</a></li>
+                <li class="admin-usuario"><a href="../Inventario/inventario.html">Inventario</a></li>
+                <li class="admin-usuario"><a href="../Contactos/Contactos.html">Proveedores</a></li>
+                <li class="solo-admin"><a href="../Administracion/Administracion.html">Administración</a></li>
+        </nav>
+        <div class="perfil-usuario">
+            <button class="btn-perfil" id="btnPerfil">👤</button>
+            <div class="menu-perfil" id="menuPerfil">
+                <div class="perfil-info">
+                    <p class="perfil-nombre">Usuario</p>
+                    <p class="perfil-email">usuario@almacen.com</p>
+                </div>
+                <hr class="perfil-divisor">
+                <a href="#" class="menu-item">Mi Perfil</a>
+                <a href="#" class="menu-item">Configuración</a>
+                <a href="#" class="menu-item">Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="isla-contenedor">
+        <h2>Inventario</h2>
+
+        <!-- Botón flotante para agregar producto -->
+        <button class="btn-flotante-agregar" id="btnAgregarProducto">
+            <span>  + Añadir Producto  </span>
+        </button>
+
+        <!-- Barra de búsqueda -->
+        <div class="barra-busqueda-container">
+            <input 
+                type="text" 
+                id="barraBusqueda" 
+                class="barra-busqueda" 
+                placeholder=" Buscar producto por nombre o código..."
+            >
+        </div>
+
+        <!-- Filtros -->
+        <div class="filtros-container">
+            <div class="filtro-grupo">
+                <label for="filtroCategoria">Categoría:</label>
+                <select id="filtroCategoria" class="filtro-select">
+                    <option value="">Todas</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="ropa">Ropa</option>
+                    <option value="alimentos">Alimentos</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label for="filtroStock">Estado del Stock:</label>
+                <select id="filtroStock" class="filtro-select">
+                    <option value="">Todos</option>
+                    <option value="disponible">Disponible</option>
+                    <option value="bajo">Bajo Stock</option>
+                    <option value="agotado">Agotado</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label for="ordenStock">Ordenar por Cantidad:</label>
+                <select id="ordenStock" class="filtro-select">
+                    <option value="">Sin orden</option>
+                    <option value="asc">Menor a Mayor</option>
+                    <option value="desc">Mayor a Menor</option>
+                </select>
+            </div>
+
+            <button class="btn-limpiar-filtros" id="btnLimpiarFiltros">Limpiar Filtros</button>
+        </div>
+
+        <section class="productos-section">
+            <div class="productos-container" id="productosContainer">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para agregar producto -->
+    <div class="modal" id="modalAgregarProducto">
+        <div class="modal-contenido">
+            <span class="modal-cerrar">&times;</span>
+            <h3>Agregar Nuevo Producto</h3>
+            <form id="formAgregarProducto">
+                <input type="text" id="inputNombre" placeholder="Nombre del producto" required>
+                <input type="text" id="inputCodigo" placeholder="Código (ej: SKU: #001)" required>
+                <input type="number" id="inputCantidad" placeholder="Cantidad" required min="0">
+                <input type="text" id="inputImagen" placeholder="URL de la imagen" required>
+                <button type="submit" class="btn-submit">Agregar Producto</button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+<footer></footer>
+<script src="./Script/Script.js"></script>
+</html>
