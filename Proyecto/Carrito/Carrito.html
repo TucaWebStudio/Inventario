@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="./CSS/Carrito.css">
+</head>
+<body>
+
+<header>
+    <div class="header-isla">
+        <h1 class="header-titulo">ALMACEN</h1>
+        <nav class="nav-centrada">
+            <ul>
+                 <li class="admin-usuario"><a href="../Carrito/Carrito.html">Ventas</a></li>
+                <li class="admin-usuario"><a href="../Inventario/inventario.html">Inventario</a></li>
+                <li class="admin-usuario"><a href="../Contactos/Contactos.html">Proveedores</a></li>
+                <li class="solo-admin"><a href="../Administracion/Administracion.html">Administración</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="isla-contenedor">
+    <h2>CAJA</h2>
+
+    <div class="ventas-layout">
+
+        <!-- PRODUCTOS -->
+        <section class="productos-section">
+            <div class="productos-container" id="productosContainer"></div>
+        </section>
+
+        <!-- CARRITO -->
+        <aside class="carrito-resumen">
+    <h3>Carrito</h3>
+
+    <ul id="listaCarrito"></ul>
+
+    <div class="totales">
+        <p>Subtotal <span id="subtotal">$0</span></p>
+        <p>IVA 8% <span id="iva">$0</span></p>
+        <h4>Total <span id="total">$0</span></h4>
+    </div>
+
+    <!-- BOTÓN PAGAR (AQUÍ) -->
+    <button class="btn-pagar" onclick="abrirPago()">PAGAR</button>
+</aside>
+
+    </div>
+
+    
+
+<div class="modal" id="modalPago">
+    <div class="modal-contenido">
+        <h3>Resumen de compra</h3>
+        <div id="resumenPago"></div>
+        <button onclick="confirmarPago()">Confirmar</button>
+        <button onclick="cerrarPago()">Cancelar</button>
+    </div>
+</div>
+</main>
+
+<script src="./Script/Script.js"></script>
+</body>
+</html>
